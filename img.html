@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimédias</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+    header { background: #007BFF; color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a.active { text-decoration: underline; }
+    .video-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px; }
+    .video-card { width: 300px; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; }
+    .video-card img { width: 100%; border-radius: 5px; }
+    .slider { position: relative; }
+    .slider img { display: none; }
+    .slider img.active { display: block; }
+    .prev, .next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.5); color: white; border: none;
+      font-size: 20px; padding: 5px 10px; cursor: pointer;
+    }
+    .prev { left: 5px; }
+    .next { right: 5px; }
+    footer { text-align: center; padding: 20px; background: #007BFF; color: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🖼️ Galerie d'Images</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="videos.html">Vidéos</a>
+      <a href="audios.html">Audios</a>
+      <a href="img.html" class="active">Images</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="videoSearch" placeholder="Rechercher une image..." />
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">Toutes</button>
+      <button class="filter-btn" data-category="pictures">Images</button>
+    </div>
+
+    <section class="video-grid">
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Logo DIOP PRESTIGE" data-category="pictures">
+        <img src="img/Logo multiservice 0.png" alt="Logo DIOP PRESTIGE">
+        <h3>Logo DIOP PRESTIGE</h3>
+      </div>
+
+      <!-- Carte de visite en slider -->
+      <div class="video-card" data-title="Carte de visite DIOP PRESTIGE" data-category="pictures">
+        <div class="slider">
+          <img src="recto.png" class="slide active" alt="recto">
+          <img src="verso.png" class="slide" alt="Verso">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Carte de visite DIOP PRESTIGE recto-verso </h3>
+      </div>
+       <!-- Carte de visite en slider -->
+      <div class="video-card" data-title="Carte de visite DIOP PRESTIGE" data-category="pictures">
+        <div class="slider">
+          <img src="1.png" class="slide active" alt="Recto">
+          <img src="2.png" class="slide" alt="Verso">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Carte de visite DIOP PRESTIGE recto-verso </h3>
+      </div>
+<section class="video-grid">
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Logo bousso bailly traitteur" data-category="pictures">
+        <img src="Logo BOUSSO BAILLY TRAITTEUR.png" alt="Logo BOUSSO BAILLY TRAITTEUR">
+        <h3>Logo BOUSSO BAILLY TRAITTEUR</h3>
+      </div>
+      <div class="video-card" data-title="Logo bousso bailly traitteur" data-category="pictures">
+        <img src="Carte de visite Bousso Bailly Traitteur.png" alt="Carte de visite Bousso Bailly Traitteur">
+        <h3>Carte de visite BOUSSO BAILLY TRAITTEUR recto simple</h3>
+      </div>
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Logo DBS BOUTIQUE." data-category="pictures">
+        <img src="Logo DBS BOUTIQUE.png" alt="Logo DBS BOUTIQUE">
+        <h3>logo DBS BOUTIQUE</h3>
+      </div>
+      <section class="video-grid">
+      <!-- Logo simple -->
+       <div class="video-card" data-title="Logo formation." data-category="pictures">
+        <img src="Logo formation.jpg" alt="Logo formation">
+        <h3>logo établissement scolaire</h3>
+      </div>
+      <div class="video-card" data-title="Logo formation." data-category="pictures">
+        <img src="tshirt logo.jpg" alt="T-shirt">
+        <h3>T-shirt de l'établissement scolaire</h3>
+      </div>
+       <div class="video-card" data-title="Logo formation." data-category="pictures">
+        <img src="siége logo.jpg" alt="T-shirt">
+        <h3>Siège de l'école</h3>
+      </div>
+      <div class="video-card" data-title="Logo formation." data-category="pictures">
+        <img src="facebook logo.jpg" alt="T-shirt">
+        <h3>Page facebook de l'école</h3>
+      </div>
+      <!-- Carte de visite en slider -->
+      <div class="video-card" data-title="Brochure DIOP PRESTIGE" data-category="pictures">
+        <div class="slider">
+          <img src="brochurerecto.png" class="slide active" alt="Recto">
+          <img src="brochureverso.png" class="slide" alt="Verso">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Plaquette DIOP PRESTIGE</h3>
+      </div>
+       <!-- Carte de visite en slider -->
+      <div class="video-card" data-title="T-shirt DIOP PRESTIGE Recto verso" data-category="pictures">
+        <div class="slider">
+          <img src="Recto T-shirt.png" class="slide active" alt="Recto">
+          <img src="Verso T-shirt.png" class="slide" alt="Verso">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>T-shirt DIOP PRESTIGE Recto verso</h3>
+      </div>
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Affiche." data-category="pictures">
+        <img src="Affiche 1.jpeg" alt="Affiche">
+        <h3>Affiche</h3>
+      </div>
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Affiche 2." data-category="pictures">
+        <img src="Affiche 2.png" alt="Affiche 2">
+        <h3>Affiche</h3>
+      </div>
+      <!-- Logo simple -->
+      <div class="video-card" data-title="Plaquette." data-category="pictures">
+        <img src="Plaquette.png" alt="Plaquette">
+        <h3>Plaquette</h3>
+      </div>
+      <div class="video-card" data-title="Cartoon." data-category="pictures">
+        <img src="Cartoon Astou.jpg" alt="Cartoon">
+        <h3>Cartoon</h3>
+      </div>
+      <div class="video-card" data-title="Cartoon." data-category="pictures">
+        <img src="Cartoon.png" alt="Cartoon">
+        <h3>Cartoon</h3>
+      </div>
+      <div class="video-card" data-title="3D." data-category="pictures">
+        <img src="3D Astou.png" alt="3D">
+        <h3>3D</h3>
+      </div>
+      <div class="video-card" data-title="Cartoon Will Smith." data-category="pictures">
+        <img src="Cartoon Will Smith.png" alt="Cartoon Will Smith">
+        <h3>Cartoon Will Smith</h3>
+      </div>
+      <div class="video-card" data-title="Dégradé." data-category="pictures">
+        <img src="Dégradé.png" alt="Dégradé">
+        <h3>Dégradé</h3>
+      </div>
+      <div class="video-card" data-title="3D." data-category="pictures">
+        <img src="3D -3.png" alt="3D">
+        <h3>3D</h3>
+      </div>
+      <div class="video-card" data-title="3D avec ombre." data-category="pictures">
+        <img src="3D avec ombre.png" alt="3D avec ombre">
+        <h3>3D avec ombre</h3>
+      </div>
+      <div class="video-card" data-title="Masque de créquage." data-category="pictures">
+        <img src="Masque de créquage.png" alt="Masque de créquage">
+        <h3>Masque de créquage</h3>
+      </div>
+       <div class="video-card" data-title="Parkaging." data-category="pictures">
+        <img src="Mockup.png" alt="Parkaging">
+        <h3>Packaging</h3>
+      </div>
+  </main>
+
+  <footer>
+       <p>&copy; 2025 - Multimédias</p>  
+  <script>
+    // Recherche
+    const searchInput = document.getElementById('videoSearch');
+    const videoCards = document.querySelectorAll('.video-card');
+    searchInput.addEventListener('input', () => {
+      const searchValue = searchInput.value.toLowerCase();
+      videoCards.forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        card.style.display = title.includes(searchValue) ? 'block' : 'none';
+      });
+    });
+
+    // Slider
+    document.querySelectorAll('.slider').forEach(slider => {
+      let index = 0;
+      const slides = slider.querySelectorAll('.slide');
+      const prev = slider.querySelector('.prev');
+      const next = slider.querySelector('.next');
+      
+      function showSlide(i) {
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      }
+      
+      prev.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : slides.length - 1;
+        showSlide(index);
+      });
+
+      next.addEventListener('click', () => {
+        index = (index < slides.length - 1) ? index + 1 : 0;
+        showSlide(index);
+      });
+    });
+  </script>
+</body>
+</html>
