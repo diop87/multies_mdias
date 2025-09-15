@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimédias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+    <h1>🎥 Mon Espace multimédias</h1>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="videos.html">Vidéos</a>
+      <a href="audios.html">Audios</a>
+      <a href="img.html">Images</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="audioSearch" placeholder="Rechercher une chanson..." />
+    </div>
+
+    <!-- Liste des audios -->
+    <section class="audio-list">
+      <div class="audio-card" data-title="chanson  1">
+        <h3>Lan laa la def</h3>
+        <audio controls>
+          <source src="Lan laa la def.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+
+      <div class="audio-card" data-title="chanson 2">
+        <h3>Yërëm sa Xol </h3>
+        <audio controls>
+          <source src="Yërëm sa Xol  (Écoute ton cœur) (2).mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 5">
+        <h3>Bokk Jom</h3>
+        <audio controls>
+          <source src="Bokk Jom.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 5">
+        <h3>Kumu Neexul</h3>
+        <audio controls>
+          <source src="Kumu Neexul.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 4">
+        <h3>Le Bal des Bienfaits</h3>
+        <audio controls>
+          <source src="Le Bal des Bienfaits.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 5">
+        <h3>Dans les ténèbres</h3>
+        <audio controls>
+          <source src="Dans les ténèbres.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 5">
+        <h3>Renaissance</h3>
+        <audio controls>
+          <source src="Renaissance.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+      <div class="audio-card" data-title="chanson 5">
+        <h3>La Maison Rose</h3>
+        <audio controls>
+          <source src="La Maison Rose.mp3" type="audio/mp3">
+          Votre navigateur ne supporte pas l'audio.
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+       <p>&copy; 2025 - Multimédias</p>  
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // Recherche des audios
+    const audioSearch = document.getElementById('audioSearch');
+    const audioCards = document.querySelectorAll('.audio-card');
+
+    audioSearch.addEventListener('input', () => {
+      const searchValue = audioSearch.value.toLowerCase();
+      audioCards.forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        card.style.display = title.includes(searchValue) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
