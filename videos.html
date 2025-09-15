@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimédiass</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles rapides pour les vidéos */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #007BFF;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .video-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      background: #fff;
+    }
+
+    .video-card video {
+      width: 100%;
+      max-height: 200px;
+      border-radius: 5px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+
+    .filter-btn.active {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+  background-color: #007BFF;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎥 Mon Espace Vidéo & 🎧 Audio</h1>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="videos.html">Vidéos</a>
+      <a href="audios.html">Audios</a>
+      <a href="img.html">Images</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="videoSearch" placeholder="Rechercher une vidéo..." />
+    </div>
+
+    <!-- Filtres -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">Toutes</button>
+      <button class="filter-btn" data-category="publicite">Publicités</button>
+      <button class="filter-btn" data-category="film">Films</button>
+      <button class="filter-btn" data-category="chanson">Chansons</button>
+    </div>
+
+    <!-- Grille des vidéos -->
+    <section class="video-grid">
+      <!-- Publicités -->
+      <div class="video-card" data-title="Prestation de service divers" data-category="publicite">
+        <video controls>
+          <source src="Prestation de service divers.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Prestation de service divers</h3>
+      </div>
+
+      <div class="video-card" data-title="Annonce site internet DIOP PRESTIGE" data-category="publicite">
+        <video controls>
+          <source src="Annonce site internet DIOP PRESTIGE.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Annonce site internet DIOP PRESTIGE</h3>
+      </div>
+
+      <!-- Films -->
+      <div class="video-card" data-title="Les Voix de la Terre" data-category="film">
+        <video controls>
+          <source src="Les Voix de la Terre.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Les Voix de la Terre</h3>
+      </div>
+<div class="video-card" data-title="Les Voix de l'Océan" data-category="film">
+        <video controls>
+          <source src="Les Voix de l'Océan.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Les Voix de l'Océan</h3>
+      </div>
+      <div class="video-card" data-title="De la Nature à l’Artificiel" data-category="film">
+        <video controls>
+          <source src="TABASKI UNE FETE MILLE PREPARATIONS.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>La TABASKI: UNE FETE MILLE PREPARATIONS</h3>
+      </div>
+
+      <div class="video-card" data-title="Chirurgie esthétique" data-category="film">
+        <video controls>
+          <source src="Chirurgie esthétique.webm" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Chirurgie esthétique</h3>
+      </div>
+
+      <div class="video-card" data-title="Au delà du miroir" data-category="film">
+        <video controls>
+          <source src="Au delà du miroir.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Au delà du miroir</h3>
+      </div>
+
+      <div class="video-card" data-title="Au delà du miroir suite" data-category="film">
+        <video controls>
+          <source src="Au delà du miroir suite.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Au delà du miroir suite</h3>
+      </div>
+
+      <!-- Chansons -->
+      <div class="video-card" data-title="Nuit Noire" data-category="chanson">
+        <video controls>
+          <source src="Nuit-Noire.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Nuit Noire</h3>
+      </div>
+
+      <div class="video-card" data-title="Lan laa la def" data-category="chanson">
+        <video controls>
+          <source src="Lan laa la def.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Lan laa la def</h3>
+      </div>
+
+      <div class="video-card" data-title="Set Setal" data-category="chanson">
+        <video controls>
+          <source src="Set-Setal.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Set Setal</h3>
+      </div>
+      <div class="video-card" data-title="Set Setal" data-category="chanson">
+        <video controls>
+          <source src="Bokk-Jom-interprète-3.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <h3>Bokk Jom</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+       <p>&copy; 2025 - Multimédias</p>  
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('videoSearch');
+    const videoCards = document.querySelectorAll('.video-card');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    // Recherche par titre
+    searchInput.addEventListener('input', () => {
+      const searchValue = searchInput.value.toLowerCase();
+      videoCards.forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        card.style.display = title.includes(searchValue) ? 'block' : 'none';
+      });
+    });
+
+    // Filtrage par catégorie
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const category = btn.dataset.category;
+        videoCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
